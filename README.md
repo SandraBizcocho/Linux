@@ -1,3 +1,3 @@
 # Linux
-## 1.- [Conociendo el servidor Linux](1.Conociendo.md)
+## 1.- [Conociendo el servidor Linux](Conociendo.md)
 ## 2.- [Autor](Autor.md)
