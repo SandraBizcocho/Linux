@@ -17,13 +17,12 @@ Muestra el FQDN (Fully Qualified Domain Name), es decir, el nombre de host compl
 
 ![hostname -f](img/host.png)
 
-**Comando:** `cat /etc/hostname`  
-Muestra el nombre de host guardado en el archivo de configuración.
-
-![cat /etc/hostname](img/hostname.png)
 
 **Comando:** `hostnamectl set-hostname NuevoNombre`  
 Permite cambiar el nombre del host de forma permanente (requiere cerrar sesión para aplicar).
+
+**Comando:** `cat /etc/hostname`  
+Muestra el nombre de host guardado en el archivo de configuración.
 
 ![cat /etc/hostname](img/hostname.png)
 
@@ -34,12 +33,8 @@ Permite cambiar el nombre del host de forma permanente (requiere cerrar sesión 
 **Comando:** `lsb_release -a`  
 Muestra la distribución de Linux y su versión.
 
-![versión sistema](img/sistema.png)
-
 **Comando:** `cat /etc/os-release`  
 Muestra información detallada de la distribución.
-
-![os-release](img/sistema.png)
 
 **Comando:** `cat /etc/debian_version`  
 Muestra la versión de Debian.
@@ -56,7 +51,7 @@ Muestra información completa del kernel, arquitectura y compilación.
 **Comando:** `uname -r`  
 Muestra únicamente la versión del kernel.
 
-![uname](img/sistema.png)
+![uname](img/nucleo.png)
 
 ---
 
@@ -74,8 +69,6 @@ Muestran el uso de la memoria RAM y swap. La opción `-h` lo muestra en formato 
 **Comando:** `lscpu`  
 Muestra información detallada de la CPU: arquitectura, núcleos, hilos, etc.
 
-![CPU](img/cpu.png)
-
 **Comando:** `nproc`  
 Muestra el número de procesadores lógicos disponibles.
 
@@ -85,11 +78,14 @@ Muestra el número de procesadores lógicos disponibles.
 
 ### 6. Discos y particiones
 
-**Comando:** `lsblk` y `lsblk -f`  
-Muestran los dispositivos de bloque y su información de sistema de archivos.
+**Comando:** `lsblk`  
+Muestra los dispositivos de bloque (discos, particiones, etc.) en forma de árbol, indicando su tamaño y relación entre ellos.
 
-**Comando:** `sudo fdisk -l`  
-Lista las particiones y discos del sistema.
+**Comando:** `lsblk -f`  
+Muestra la misma información que `lsblk`, pero añade detalles sobre el sistema de archivos (tipo, UUID, etiqueta).
+
+**Comando:** `fdisk -l`  
+Lista las particiones y discos detectados en el sistema, mostrando tamaños, sectores y tipo de partición.
 
 ![discos](img/discos.png)
 
@@ -109,14 +105,17 @@ Incluye el tipo de sistema de archivos.
 
 ### 8. Tamaño de carpetas
 
-**Comando:** `du -h /home/`  
-Muestra el tamaño de las carpetas dentro de `/home`.
+**Comando:** `du -h`  
+Muestra el tamaño de todos los archivos y directorios de forma recursiva en la carpeta donde se ejecute, en formato legible (KB, MB, GB).
 
-**Comando:** `du -hs /home`  
-Muestra el tamaño total de `/home`.
+**Comando:** `du -h /home/`  
+Hace lo mismo que el anterior, pero mostrando el tamaño de todos los archivos y subdirectorios dentro de `/home`.
+
+**Comando:** `du -hs /home s`  
+Muestra el tamaño total de la carpeta `/home` sin desglosar el tamaño de cada subcarpeta.
 
 **Comando:** `du -hs /home/*`  
-Muestra el tamaño de cada subcarpeta dentro de `/home`.
+Muestra el tamaño de cada subcarpeta dentro de `/home`, en formato resumido.
 
 ![tamaño carpetas](img/tamano.png)
 
@@ -124,22 +123,22 @@ Muestra el tamaño de cada subcarpeta dentro de `/home`.
 
 ### 9. Usuarios y grupos del sistema
 
-**Comando:** `cat /etc/passwd` y `getent passwd`  
+**Comandos:** `cat /etc/passwd` y `getent passwd`  
 Muestran la lista de usuarios del sistema.
 
 ![passwd](img/passwd.png)
 
-**Comando:** `cat /etc/shadow` y `getent shadow`  
+**Comandos:** `cat /etc/shadow` y `getent shadow`  
 Muestran las contraseñas encriptadas (requiere permisos de root).
 
 ![shadow](img/shadow.png)
 
-**Comando:** `cat /etc/group` y `getent group`  
+**Comandos:** `cat /etc/group` y `getent group`  
 Muestran los grupos existentes.
 
 ![group](img/group.png)
 
-**Comando:** `cat /etc/gshadow` y `getent gshadow`  
+**Comandos:** `cat /etc/gshadow` y `getent gshadow`  
 Muestran contraseñas de grupos.
 
 ![gshadow](img/gshadow.png)
@@ -154,7 +153,7 @@ Indica dónde busca el sistema la información de usuarios, grupos, hosts, etc. 
 ### 10. Información de la red
 
 **Comando:** `ip a`  
-Muestra todas las interfaces de red, direcciones IP y estado (UP/DOWN).
+Muestra todas las interfaces de red, direcciones IP y su estado (UP/DOWN).
 
 ![ip a](img/ipa.png)
 
@@ -205,17 +204,25 @@ Muestra los servidores DNS configurados en el sistema.
 
 ### 14. Reiniciar la red
 
-**Comando:**  
-```bash
-systemctl status networking
-systemctl restart networking
+**Comando:** `systemctl status networking`
+Muestra el estado actual del servicio de red, indicando si está activo, inactivo o fallando.
+
+**Comando:** `systemctl restart networking`
+Reinicia el servicio de red, aplicando cualquier cambio de configuración realizado.
+
+![estadodelared.conf](img/reiniciarRed.png)
 
 ---
 
 ### 15. Bajar o subir una tarjeta de red
 
-**Comandos:**
-```ifdown eth0
-```ifup eth0
-```ifdown eth0 && ifup eth0
-Permiten desactivar y reactivar manualmente una interfaz de red.
+**Comando:** `ifup eth0`
+Activa la interfaz de red eth0, levantándola con su configuración.
+
+**Comando:** `ifdown eth0`
+Desactiva la interfaz de red eth0, dejándola inactiva.
+
+**Comando:** `ifdown eth0 && ifup eth0`
+Primero desactiva y luego vuelve a activar la interfaz eth0, aplicando cualquier cambio de configuración.
+
+![tarjeta.conf](img/bajarYsubirTarjeta.png)
