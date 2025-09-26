@@ -9,12 +9,8 @@ En este apartado se documentan los comandos pedidos en la tarea para conocer y a
 **Comando:** `hostname`  
 Muestra el nombre del host actual del sistema.
 
-![hostname](img/host.png)
-
 **Comando:** `hostname -I`  
 Muestra las direcciones IP asignadas al host.
-
-![hostname -I](img/host.png)
 
 **Comando:** `hostname -f`  
 Muestra el FQDN (Fully Qualified Domain Name), es decir, el nombre de host completo con dominio.
