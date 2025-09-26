@@ -15,7 +15,9 @@ Muestra las direcciones IP asignadas al host.
 **Comando:** `hostname -f`  
 Muestra el FQDN (Fully Qualified Domain Name), es decir, el nombre de host completo con dominio.
 
-![hostname -f](img/host.png)
+<p align="center">
+  <img src="/img/host.png" alt="![host](/img/host.png)" />
+</p>  
 
 
 **Comando:** `hostnamectl set-hostname NuevoNombre`  
