@@ -9,7 +9,7 @@ En este apartado se documentan los comandos pedidos en la tarea para conocer y a
 **Comando:** `hostname`  
 Muestra el nombre del host actual del sistema.
 
-![hostname](img/hostname.png)
+![hostname](img/host.png)
 
 **Comando:** `hostname -I`  
 Muestra las direcciones IP asignadas al host.
@@ -21,11 +21,6 @@ Muestra el FQDN (Fully Qualified Domain Name), es decir, el nombre de host compl
 
 ![hostname -f](img/host.png)
 
-**Comando:** `hostnamectl`  
-Herramienta moderna para ver y cambiar el hostname sin reiniciar. Pertenece a `systemd`.
-
-![hostnamectl](img/host.png)
-
 **Comando:** `cat /etc/hostname`  
 Muestra el nombre de host guardado en el archivo de configuración.
 
@@ -33,6 +28,8 @@ Muestra el nombre de host guardado en el archivo de configuración.
 
 **Comando:** `hostnamectl set-hostname NuevoNombre`  
 Permite cambiar el nombre del host de forma permanente (requiere cerrar sesión para aplicar).
+
+![cat /etc/hostname](img/hostname.png)
 
 ---
 
