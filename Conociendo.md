@@ -6,7 +6,7 @@ En este apartado se documentan los comandos pedidos en la tarea para conocer y a
 
 ### 1. Nombre del host 🏷️
 
-***Comando:** `hostname`  
+* **Comando:** `hostname`  
 Muestra el nombre del host actual del sistema.
 
 **Comando:** `hostname -I`  
