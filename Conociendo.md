@@ -268,3 +268,5 @@ Primero desactiva y luego vuelve a activar la interfaz eth0, aplicando cualquier
 <p align="center">
   <img src="/img/bajarYsubirTarjeta.png" alt="![bajarYsubirTarjeta](/img/bajarYsubirTarjeta.png)" />
 </p> 
+
+2.[Autor](Autor.md)
