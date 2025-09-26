@@ -1,10 +1,10 @@
-# 1.- CONOCIENDO EL SERVIDOR LINUX
+# 1.- CONOCIENDO EL SERVIDOR LINUX 🖥️🐧
 
 En este apartado se documentan los comandos pedidos en la tarea para conocer y administrar el servidor Linux.  Cada comando tiene su explicación y su captura correspondiente.  
 
 ---
 
-### 1. Nombre del host
+### 1. Nombre del host 🏷️
 
 **Comando:** `hostname`  
 Muestra el nombre del host actual del sistema.
@@ -28,7 +28,7 @@ Muestra el nombre de host guardado en el archivo de configuración.
 
 ---
 
-### 2. Versión del sistema
+### 2. Versión del sistema 🖥️
 
 **Comando:** `lsb_release -a`  
 Muestra la distribución de Linux y su versión.
@@ -43,7 +43,7 @@ Muestra la versión de Debian.
 
 ---
 
-### 3. Versión del núcleo y arquitectura
+### 3. Versión del núcleo y arquitectura ⚙️🔧
 
 **Comando:** `uname -a`  
 Muestra información completa del kernel, arquitectura y compilación.
@@ -55,7 +55,7 @@ Muestra únicamente la versión del kernel.
 
 ---
 
-### 4. Memoria RAM
+### 4. Memoria RAM 🧠💾
 
 **Comando:** `free` y `free -h`  
 Muestran el uso de la memoria RAM y swap. La opción `-h` lo muestra en formato legible (MB/GB).
@@ -64,7 +64,7 @@ Muestran el uso de la memoria RAM y swap. La opción `-h` lo muestra en formato 
 
 ---
 
-### 5. CPU
+### 5. CPU 🖥️💨
 
 **Comando:** `lscpu`  
 Muestra información detallada de la CPU: arquitectura, núcleos, hilos, etc.
@@ -76,7 +76,7 @@ Muestra el número de procesadores lógicos disponibles.
 
 ---
 
-### 6. Discos y particiones
+### 6. Discos y particiones 💽
 
 **Comando:** `lsblk`  
 Muestra los dispositivos de bloque (discos, particiones, etc.) en forma de árbol, indicando su tamaño y relación entre ellos.
@@ -91,7 +91,7 @@ Lista las particiones y discos detectados en el sistema, mostrando tamaños, sec
 
 ---
 
-### 7. Sistemas montados
+### 7. Sistemas montados 📂
 
 **Comando:** `df -h`  
 Muestra el uso de disco de cada sistema de archivos montado.
@@ -103,7 +103,7 @@ Incluye el tipo de sistema de archivos.
 
 ---
 
-### 8. Tamaño de carpetas
+### 8. Tamaño de carpetas 📁
 
 **Comando:** `du -h`  
 Muestra el tamaño de todos los archivos y directorios de forma recursiva en la carpeta donde se ejecute, en formato legible (KB, MB, GB).
@@ -121,7 +121,7 @@ Muestra el tamaño de cada subcarpeta dentro de `/home`, en formato resumido.
 
 ---
 
-### 9. Usuarios y grupos del sistema
+### 9. Usuarios y grupos del sistema 👥🔒
 
 **Comandos:** `cat /etc/passwd` y `getent passwd`  
 Muestran la lista de usuarios del sistema.
@@ -150,7 +150,7 @@ Indica dónde busca el sistema la información de usuarios, grupos, hosts, etc. 
 
 ---
 
-### 10. Información de la red
+### 10. Información de la red 🌐🌎
 
 **Comando:** `ip a`  
 Muestra todas las interfaces de red, direcciones IP y su estado (UP/DOWN).
@@ -172,7 +172,7 @@ Verifica conectividad a Internet (avg < 20ms en condiciones normales).
 
 ---
 
-### 11. Comprobar DNS
+### 11. Comprobar DNS 🔍
 
 **Comando:** `nslookup google.es`  
 Muestra qué servidor DNS responde la consulta y su IP.
@@ -184,7 +184,7 @@ Muestra quién es el propietario de esa IP.
 
 ---
 
-### 12. Configuración de la red
+### 12. Configuración de la red ⚙️
 
 **Comando:** `cat /etc/network/interfaces`  
 Muestra la configuración de las interfaces de red.
@@ -193,7 +193,7 @@ Muestra la configuración de las interfaces de red.
 
 ---
 
-### 13. Configuración tradicional de DNS
+### 13. Configuración tradicional de DNS 🌐
 
 **Comando:** `cat /etc/resolv.conf`  
 Muestra los servidores DNS configurados en el sistema.
@@ -202,7 +202,7 @@ Muestra los servidores DNS configurados en el sistema.
 
 ---
 
-### 14. Reiniciar la red
+### 14. Reiniciar la red 🔄
 
 **Comando:** `systemctl status networking`
 Muestra el estado actual del servicio de red, indicando si está activo, inactivo o fallando.
@@ -214,7 +214,7 @@ Reinicia el servicio de red, aplicando cualquier cambio de configuración realiz
 
 ---
 
-### 15. Bajar o subir una tarjeta de red
+### 15. Bajar o subir una tarjeta de red 🖧⬆️⬇️
 
 **Comando:** `ifup eth0`
 Activa la interfaz de red eth0, levantándola con su configuración.
