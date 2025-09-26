@@ -242,10 +242,10 @@ Muestra los servidores DNS configurados en el sistema.
 
 ### 14. Reiniciar la red 🔄
 
-* **Comando:** `systemctl status networking`
+* **Comando:** `systemctl status networking`  
 Muestra el estado actual del servicio de red, indicando si está activo, inactivo o fallando.
 
-* **Comando:** `systemctl restart networking`
+* **Comando:** `systemctl restart networking`  
 Reinicia el servicio de red, aplicando cualquier cambio de configuración realizado.
 
 <p align="center">
@@ -256,13 +256,13 @@ Reinicia el servicio de red, aplicando cualquier cambio de configuración realiz
 
 ### 15. Bajar o subir una tarjeta de red 🖧⬆️⬇️
 
-* **Comando:** `ifup eth0`
+* **Comando:** `ifup eth0`  
 Activa la interfaz de red eth0, levantándola con su configuración.
 
-* **Comando:** `ifdown eth0`
+* **Comando:** `ifdown eth0`  
 Desactiva la interfaz de red eth0, dejándola inactiva.
 
-* **Comando:** `ifdown eth0 && ifup eth0`
+* **Comando:** `ifdown eth0 && ifup eth0`  
 Primero desactiva y luego vuelve a activar la interfaz eth0, aplicando cualquier cambio de configuración.
 
 <p align="center">
